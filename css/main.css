@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+/* font-family: 'Amatic SC', cursive; */
+
+body {
+  font-family: 'Amatic SC', cursive;
+/* background: url(../img/bg_backwave.png) repeat-x left 100px, -webkit-linear-gradient(top, rgb(66,150,214) 0%,rgb(37,180,209) 39%,rgb(37,180,209) 40%,rgb(39,119,66) 40%,rgb(24,107,20) 40%,rgb(24,107,20) 40%,rgb(39,119,66) 40%,rgb(26,86,40) 52%,rgb(26,86,40) 52%,rgb(89,48,9) 99%); */
+background: -webkit-linear-gradient(top, rgb(179,234,242) 0%,rgb(159,216,239) 5%,rgb(159,216,239) 5%,rgb(159,216,239) 6%,rgb(159,216,239) 6%,rgb(191,232,249) 6%,rgb(191,232,249) 6%,rgb(191,232,249) 9%,rgb(191,232,249) 10%,rgb(147,212,242) 28%,rgb(104,202,232) 59%,rgb(42,176,237) 100%);
+margin: 0;
+padding: 0;
+
+}
+#counter {
+  border: 1px solid red;
+  position: absolute;
+  margin:0;
+  padding: 10px;
+  width:200px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  top:0;
+  left:0;
+}
+
+#canvas {
+  border: 1px solid purple;
+  position: relative;
+  margin: 0 auto;
+  width: 800px;
+  height:10000px;
+  padding: 0px;
+
+}
+
+#sfish {
+  /* position: fixed;
+  left: 350px;
+  top: 400px; */
+  position: fixed;
+  top:450px;
+  left: -75px;
+  margin-left: 50%;
+}
+
+#screen {
+  position:relative;
+  border: 1px solid red;
+  height: 100%;
+  width: 100%;
+}
+
+#plant1 {
+  background-image:url("http://via.placeholder.com/500x150");
+  border:1px red solid;
+  width:500px;
+  height:150px;
+  position: absolute;
+  left:0px;
+  top:1200px;
+  transform: rotate(-70deg);
+  animation: sway-left1 10s ease infinite alternate-reverse;
+  transform-origin: left;
+  transition: 1s all;
+}
+
+#plant2 {
+  background-image:url("http://via.placeholder.com/350x150");
+  width:350px;
+  height:150px;
+  position: absolute;
+  left:0px;
+  top:1200px;
+  transform: rotate(-70deg);
+  animation: sway-left2 10s ease infinite alternate-reverse;
+  transform-origin: left;
+  transition: 1s all;
+}
+
+#plant3 {
+  background-image:url("http://via.placeholder.com/450x150");
+  width:450px;
+  height:150px;
+  position: absolute;
+  left:0px;
+  top:1200px;
+  transform: rotate(-70deg);
+  animation: sway-left3 10s ease infinite alternate-reverse .75s;
+  transform-origin: left;
+  transition: 1s all;
+}
+
+
+@keyframes sway-left1 {
+0% {transform:rotate(-70deg);}
+/* 50% {transform:rotate(-60deg);} */
+100% {transform:rotate(-50deg);}
+}
+
+@keyframes sway-left2 {
+  0% {transform:rotate(-90deg);}
+  100% {transform:rotate(-30deg);}
+}
+
+@keyframes sway-left3 {
+  0% {transform:rotate(-60deg);}
+  100% {transform:rotate(-20deg);}
+}
+
+#plant4 {
+  background-image:url("http://via.placeholder.com/350x150");
+  width:350px;
+  height:150px;
+  position: absolute;
+  right:0px;
+  top:1500px;
+  transform: rotate(70deg);
+  animation: sway-right1 10s ease infinite alternate-reverse ;
+  transform-origin: right;
+  transition: 1s all;
+}
+
+#plant5 {
+  background-image:url("http://via.placeholder.com/350x150");
+  width:350px;
+  height:150px;
+  position: absolute;
+  right: 0px;
+  top:1500px;
+  transform: rotate(70deg);
+  animation: sway-right2 10s ease infinite alternate-reverse .75s;
+  transform-origin: right;
+  transition: 1s all;
+}
+
+#plant6 {
+  background-image:url("http://via.placeholder.com/350x150");
+  width:350px;
+  height:150px;
+  position: absolute;
+  right:0px;
+  top:1500px;
+  transform: rotate(70deg);
+  animation: sway-right1 10s ease infinite alternate-reverse 1s;
+  transform-origin: right;
+  transition: 1s all;
+}
+
+#plant7 {
+  background-image:url("http://via.placeholder.com/350x150");
+  width:350px;
+  height:150px;
+  position: absolute;
+  right:0px;
+  top:1500px;
+  transform: rotate(70deg);
+  animation: sway-right3 10s ease infinite alternate-reverse;
+  transform-origin: right;
+  transition: 1s all;
+}
+
+#plant8 {
+  background-image:url("http://via.placeholder.com/300x150");
+  border:1px red solid;
+  width:300px;
+  height:150px;
+  position: absolute;
+  left:0px;
+  top:2300px;
+  transform: rotate(-70deg);
+  animation: sway-left1 10s ease infinite alternate-reverse;
+  transform-origin: left;
+  transition: 1s all;
+}
+
+#plant9 {
+  background-image:url("http://via.placeholder.com/350x150");
+  width:350px;
+  height:150px;
+  position: absolute;
+  left:0px;
+  top:2300px;
+  transform: rotate(-70deg);
+  animation: sway-left2 10s ease infinite alternate-reverse;
+  transform-origin: left;
+  transition: 1s all;
+}
+
+#plant10 {
+  background-image:url("http://via.placeholder.com/100x150");
+  width:100px;
+  height:150px;
+  position: absolute;
+  left:0px;
+  top:2300px;
+  transform: rotate(-70deg);
+  animation: sway-left3 10s ease infinite alternate-reverse .75s;
+  transform-origin: left;
+  transition: 1s all;
+}
+#plant11 {
+  background-image:url("http://via.placeholder.com/450x150");
+  width:450px;
+  height:150px;
+  position: absolute;
+  left:0px;
+  top:2300px;
+  transform: rotate(-70deg);
+  animation: sway-left3 10s ease infinite alternate-reverse .75s;
+  transform-origin: left;
+  transition: 1s all;
+}
+
+@keyframes sway-right1 {
+0% {transform:rotate(70deg);}
+/* 50% {transform:rotate(-60deg);} */
+100% {transform:rotate(50deg);}
+}
+
+@keyframes sway-right2 {
+  0% {transform:rotate(90deg);}
+  100% {transform:rotate(30deg);}
+}
+
+@keyframes sway-right3 {
+  0% {transform:rotate(60deg);}
+  100% {transform:rotate(20deg);}
+}
+
+/* FISH */
+.restart {
+  animation: bounce 1s ease-in-out 1 both;
+}
+
+@keyframes bounce {
+
+  50% {transform:translateY(50px);}
+
+}
+
+/* #sfish {
+  height:50px;
+  width:50px;
+  border:1px solid red;
+  position:fixed;
+} */
