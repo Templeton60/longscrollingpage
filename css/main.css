@@ -36,9 +36,11 @@ padding: 0;
   /* position: fixed;
   left: 350px;
   top: 400px; */
+  height:300px;
+  width:300px;
   position: fixed;
   top:450px;
-  left: -75px;
+  left: -150px;
   margin-left: 50%;
 }
 
@@ -50,60 +52,68 @@ padding: 0;
 }
 
 #plant1 {
-  background-image:url("http://via.placeholder.com/500x150");
+  /* background-image:url("../img/javafern2.svg"); */
   border:1px red solid;
-  width:500px;
-  height:150px;
+  width:200px;
+  height:900px;
   position: absolute;
-  left:0px;
-  top:1200px;
-  transform: rotate(-70deg);
-  animation: sway-left1 10s ease infinite alternate-reverse;
-  transform-origin: left;
+  left:-200px;
+  top:700px;
+  transform: rotate(70deg);
+  animation: sway-left1 11s ease infinite alternate-reverse;
+  transform-origin: bottom;
   transition: 1s all;
 }
 
 #plant2 {
-  background-image:url("http://via.placeholder.com/350x150");
-  width:350px;
-  height:150px;
+  /* background-image:url("../img/javafern2.svg"); */
+  outline: 1px solid yellow;
+  width:200px;
+  height:900px;
   position: absolute;
-  left:0px;
-  top:1200px;
-  transform: rotate(-70deg);
+  left:-250px;
+  top:750px;
+  transform: rotate(50deg);
   animation: sway-left2 10s ease infinite alternate-reverse;
-  transform-origin: left;
+  transform-origin: bottom;
   transition: 1s all;
 }
 
 #plant3 {
-  background-image:url("http://via.placeholder.com/450x150");
-  width:450px;
-  height:150px;
+  /* background-image:url("../img/javafern2.svg"); */
+  outline: 1px solid green;
+  width:200px;
+  height:900px;
   position: absolute;
-  left:0px;
-  top:1200px;
-  transform: rotate(-70deg);
-  animation: sway-left3 10s ease infinite alternate-reverse .75s;
-  transform-origin: left;
+  left:-200px;
+  top:800px;
+  transform: rotate(30deg);
+  animation: sway-left3 13s ease infinite alternate-reverse;
+  transform-origin: bottom;
   transition: 1s all;
 }
+/* img {
+  outline: 2px solid orange;
+} */
 
+/* @keyframes sway-left1 {
+0% {transform:rotate(-70deg);}
+100% {transform:rotate(-50deg);}
+} */
 
 @keyframes sway-left1 {
-0% {transform:rotate(-70deg);}
-/* 50% {transform:rotate(-60deg);} */
-100% {transform:rotate(-50deg);}
+0% {transform:rotate(50deg);}
+100% {transform:rotate(70deg);}
 }
 
 @keyframes sway-left2 {
-  0% {transform:rotate(-90deg);}
-  100% {transform:rotate(-30deg);}
+  0% {transform:rotate(50deg);}
+  100% {transform:rotate(60deg);}
 }
 
 @keyframes sway-left3 {
-  0% {transform:rotate(-60deg);}
-  100% {transform:rotate(-20deg);}
+  0% {transform:rotate(30deg);}
+  100% {transform:rotate(50deg);}
 }
 
 #plant4 {
