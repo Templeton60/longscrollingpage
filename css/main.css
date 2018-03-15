@@ -4,7 +4,7 @@
 body {
   font-family: 'Amatic SC', cursive;
 /* background: url(../img/bg_backwave.png) repeat-x left 100px, -webkit-linear-gradient(top, rgb(66,150,214) 0%,rgb(37,180,209) 39%,rgb(37,180,209) 40%,rgb(39,119,66) 40%,rgb(24,107,20) 40%,rgb(24,107,20) 40%,rgb(39,119,66) 40%,rgb(26,86,40) 52%,rgb(26,86,40) 52%,rgb(89,48,9) 99%); */
-background: -webkit-linear-gradient(top, rgb(179,234,242) 0%,rgb(159,216,239) 5%,rgb(159,216,239) 5%,rgb(159,216,239) 6%,rgb(159,216,239) 6%,rgb(191,232,249) 6%,rgb(191,232,249) 6%,rgb(191,232,249) 9%,rgb(191,232,249) 10%,rgb(147,212,242) 28%,rgb(104,202,232) 59%,rgb(42,176,237) 100%);
+background: -webkit-linear-gradient(top, rgb(186,222,255) 0%,rgb(159,216,239) 5%,rgb(159,216,239) 5%,rgb(159,216,239) 6%,rgb(186,222,255) 6%,rgb(186,222,255) 6%,rgb(186,222,255) 6%,rgb(191,232,249) 9%,rgb(191,232,249) 10%,rgb(147,212,242) 28%,rgb(104,202,232) 59%,rgb(42,176,237) 100%);
 margin: 0;
 padding: 0;
 
@@ -20,10 +20,11 @@ padding: 0;
   text-align: center;
   top:0;
   left:0;
+  visibility: hidden;
 }
 
 #canvas {
-  border: 1px solid purple;
+  /* border: 1px solid purple; */
   position: relative;
   margin: 0 auto;
   width: 800px;
@@ -42,18 +43,30 @@ padding: 0;
   top:450px;
   left: -150px;
   margin-left: 50%;
+  z-index:100;
+}
+
+.right {
+  background-image: url('../img/stromboli-right.svg');
+  animation: floaty 4s ease-in-out infinite;
+}
+
+.default {
+  background-image: url('../img/stromboli-light.svg');
+  animation: floaty 4s ease-in-out infinite;
 }
 
 #screen {
   position:relative;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   height: 100%;
   width: 100%;
+  overflow: hidden;
 }
 
 #plant1 {
   /* background-image:url("../img/javafern2.svg"); */
-  border:1px red solid;
+  /* border:1px red solid; */
   width:200px;
   height:900px;
   position: absolute;
@@ -61,13 +74,13 @@ padding: 0;
   top:700px;
   transform: rotate(70deg);
   animation: sway-left1 11s ease infinite alternate-reverse;
-  transform-origin: bottom;
+  transform-origin: right bottom;
   transition: 1s all;
 }
 
 #plant2 {
   /* background-image:url("../img/javafern2.svg"); */
-  outline: 1px solid yellow;
+  /* outline: 1px solid yellow; */
   width:200px;
   height:900px;
   position: absolute;
@@ -81,7 +94,7 @@ padding: 0;
 
 #plant3 {
   /* background-image:url("../img/javafern2.svg"); */
-  outline: 1px solid green;
+  /* outline: 1px solid green; */
   width:200px;
   height:900px;
   position: absolute;
@@ -102,8 +115,8 @@ padding: 0;
 } */
 
 @keyframes sway-left1 {
-0% {transform:rotate(50deg);}
-100% {transform:rotate(70deg);}
+0% {transform:rotate(30deg);}
+100% {transform:rotate(20deg);}
 }
 
 @keyframes sway-left2 {
@@ -113,132 +126,261 @@ padding: 0;
 
 @keyframes sway-left3 {
   0% {transform:rotate(30deg);}
-  100% {transform:rotate(50deg);}
+  100% {transform:rotate(40deg);}
 }
 
 #plant4 {
-  background-image:url("http://via.placeholder.com/350x150");
-  width:350px;
-  height:150px;
+  /* background-image:url("../img/javafern2.svg") ; */
+  width:200px;
+  height:900px;
   position: absolute;
-  right:0px;
-  top:1500px;
-  transform: rotate(70deg);
-  animation: sway-right1 10s ease infinite alternate-reverse ;
-  transform-origin: right;
+  right:-50px;
+  top:1200px;
+  animation: sway-right1 13s ease infinite alternate-reverse ;
+  transform-origin: right bottom;
   transition: 1s all;
 }
 
 #plant5 {
-  background-image:url("http://via.placeholder.com/350x150");
-  width:350px;
-  height:150px;
+  /* background-image:url("../img/javafern2.svg") ; */
+  width:200px;
+  height:900px;
   position: absolute;
-  right: 0px;
-  top:1500px;
-  transform: rotate(70deg);
-  animation: sway-right2 10s ease infinite alternate-reverse .75s;
-  transform-origin: right;
+  right:-100px;
+  top:1200px;
+  animation: sway-right2 13s ease infinite alternate-reverse ;
+  transform-origin: right bottom;
   transition: 1s all;
 }
 
 #plant6 {
-  background-image:url("http://via.placeholder.com/350x150");
-  width:350px;
-  height:150px;
+  /* background-image:url("../img/javafern2.svg") ; */
+  width:200px;
+  height:900px;
   position: absolute;
-  right:0px;
-  top:1500px;
-  transform: rotate(70deg);
-  animation: sway-right1 10s ease infinite alternate-reverse 1s;
-  transform-origin: right;
+  right:-75px;
+  top:1250px;
+  animation: sway-right3 13s ease infinite alternate-reverse ;
+  transform-origin: right bottom;
   transition: 1s all;
 }
 
 #plant7 {
-  background-image:url("http://via.placeholder.com/350x150");
-  width:350px;
-  height:150px;
+  /* background-image:url("../img/javafern2.svg") ; */
+  width:200px;
+  height:900px;
   position: absolute;
-  right:0px;
-  top:1500px;
-  transform: rotate(70deg);
-  animation: sway-right3 10s ease infinite alternate-reverse;
-  transform-origin: right;
+  right:-50px;
+  top:1300px;
+  animation: sway-right1 13s ease infinite alternate-reverse .5s ;
+  transform-origin: right bottom;
   transition: 1s all;
 }
 
 #plant8 {
-  background-image:url("http://via.placeholder.com/300x150");
-  border:1px red solid;
-  width:300px;
-  height:150px;
+  width:200px;
+  height:900px;
   position: absolute;
-  left:0px;
-  top:2300px;
-  transform: rotate(-70deg);
-  animation: sway-left1 10s ease infinite alternate-reverse;
-  transform-origin: left;
+  left:-200px;
+  top:2000px;
+  animation: sway-left1 13s ease infinite alternate-reverse;
+  transform-origin: bottom;
   transition: 1s all;
 }
 
 #plant9 {
-  background-image:url("http://via.placeholder.com/350x150");
-  width:350px;
-  height:150px;
+  width:200px;
+  height:900px;
   position: absolute;
-  left:0px;
-  top:2300px;
-  transform: rotate(-70deg);
-  animation: sway-left2 10s ease infinite alternate-reverse;
-  transform-origin: left;
+  left:-200px;
+  top:2100px;
+  animation: sway-left2 13s ease infinite alternate-reverse;
+  transform-origin: bottom;
   transition: 1s all;
 }
 
 #plant10 {
-  background-image:url("http://via.placeholder.com/100x150");
-  width:100px;
-  height:150px;
+  width:200px;
+  height:900px;
   position: absolute;
-  left:0px;
-  top:2300px;
-  transform: rotate(-70deg);
-  animation: sway-left3 10s ease infinite alternate-reverse .75s;
-  transform-origin: left;
+  left:-200px;
+  top:2150px;
+  animation: sway-left3 13s ease infinite alternate-reverse;
+  transform-origin: bottom;
   transition: 1s all;
 }
 #plant11 {
-  background-image:url("http://via.placeholder.com/450x150");
-  width:450px;
-  height:150px;
+  width:200px;
+  height:900px;
   position: absolute;
-  left:0px;
-  top:2300px;
-  transform: rotate(-70deg);
-  animation: sway-left3 10s ease infinite alternate-reverse .75s;
-  transform-origin: left;
+  left:-200px;
+  top:2150px;
+  animation: sway-left1 13s ease infinite alternate-reverse 2s;
+  transform-origin: bottom;
   transition: 1s all;
 }
 
 @keyframes sway-right1 {
-0% {transform:rotate(70deg);}
-/* 50% {transform:rotate(-60deg);} */
-100% {transform:rotate(50deg);}
+0% {transform:rotate(-20deg);}
+100% {transform:rotate(-30deg);}
 }
 
 @keyframes sway-right2 {
-  0% {transform:rotate(90deg);}
-  100% {transform:rotate(30deg);}
+  0% {transform:rotate(-30deg);}
+  100% {transform:rotate(-10deg);}
 }
 
 @keyframes sway-right3 {
-  0% {transform:rotate(60deg);}
-  100% {transform:rotate(20deg);}
+  0% {transform:rotate(-40deg);}
+  100% {transform:rotate(-20deg);}
+}
+
+#plant12 {
+  /* background-image:url("../img/javafern2.svg") ; */
+  width:200px;
+  height:900px;
+  position: absolute;
+  right:-50px;
+  top:3350px;
+  animation: sway-right1 13s ease infinite alternate-reverse ;
+  transform-origin: right bottom;
+  transition: 1s all;
+}
+
+#plant13 {
+  /* background-image:url("../img/javafern2.svg") ; */
+  width:200px;
+  height:900px;
+  position: absolute;
+  right:-100px;
+  top:3400px;
+  animation: sway-right2 13s ease infinite alternate-reverse ;
+  transform-origin: right bottom;
+  transition: 1s all;
+}
+
+#plant14 {
+  /* background-image:url("../img/javafern2.svg") ; */
+  width:200px;
+  height:900px;
+  position: absolute;
+  right:-75px;
+  top:3300px;
+  animation: sway-right3 13s ease infinite alternate-reverse ;
+  transform-origin: right bottom;
+  transition: 1s all;
+}
+
+#plant15 {
+  width:200px;
+  height:900px;
+  position: absolute;
+  left:-200px;
+  top:5300px;
+  animation: sway-left2 13s ease infinite alternate-reverse;
+  transform-origin: bottom;
+  transition: 1s all;
+}
+
+#plant16 {
+  width:200px;
+  height:900px;
+  position: absolute;
+  left:-200px;
+  top:5350px;
+  animation: sway-left3 13s ease infinite alternate-reverse;
+  transform-origin: bottom;
+  transition: 1s all;
+}
+#plant17 {
+  width:200px;
+  height:900px;
+  position: absolute;
+  left:-200px;
+  top:5300px;
+  animation: sway-left1 13s ease infinite alternate-reverse 2s;
+  transform-origin: bottom;
+  transition: 1s all;
+}
+
+#plant18 {
+  /* background-image:url("../img/javafern2.svg") ; */
+  width:200px;
+  height:900px;
+  position: absolute;
+  right:-50px;
+  top:7560px;
+  animation: sway-right1 13s ease infinite alternate-reverse ;
+  transform-origin: right bottom;
+  transition: 1s all;
+}
+
+#plant19 {
+  /* background-image:url("../img/javafern2.svg") ; */
+  width:200px;
+  height:900px;
+  position: absolute;
+  right:-100px;
+  top:7600px;
+  animation: sway-right2 13s ease infinite alternate-reverse ;
+  transform-origin: right bottom;
+  transition: 1s all;
+}
+
+#plant20 {
+  /* background-image:url("../img/javafern2.svg") ; */
+  width:200px;
+  height:900px;
+  position: absolute;
+  right:-75px;
+  top:7500px;
+  animation: sway-right3 13s ease infinite alternate-reverse ;
+  transform-origin: right bottom;
+  transition: 1s all;
+}
+
+#plant21 {
+  width:200px;
+  height:900px;
+  position: absolute;
+  left:-200px;
+  top:8900px;
+  animation: sway-left2 13s ease infinite alternate-reverse;
+  transform-origin: bottom;
+  transition: 1s all;
+}
+
+#plant22 {
+  width:200px;
+  height:900px;
+  position: absolute;
+  left:-200px;
+  top:9200px;
+  animation: sway-left3 13s ease infinite alternate-reverse;
+  transform-origin: bottom;
+  transition: 1s all;
+}
+#plant23 {
+  width:200px;
+  height:900px;
+  position: absolute;
+  left:-200px;
+  top:9000px;
+  animation: sway-left1 13s ease infinite alternate-reverse 2s;
+  transform-origin: bottom;
+  transition: 1s all;
 }
 
 /* FISH */
 .restart {
   animation: bounce 1s ease-in-out 1 both;
+  /* background-color: red; */
+  background-image: url('../img/stromboli-top.svg');
+  background-size: 300px;
+
+}
+@keyframes floaty{
+  50% {transform:translateY(20px);}
 }
 
 @keyframes bounce {
@@ -246,6 +388,78 @@ padding: 0;
   50% {transform:translateY(50px);}
 
 }
+/* FISH END */
+
+/* CHEST */
+#chest {
+  position: absolute;
+  left: 1100px;
+  bottom:0;
+  height:300px;
+  width:300px;
+}
+#chestlid {
+  position: absolute;
+  left: 1100px;
+  bottom:300px;
+  height:300px;
+  width:300px;
+  z-index:10;
+}
+
+#gold {
+  position: absolute;
+  bottom: 340px;
+  left:1100px;
+  width:290px;
+  height:100px;
+}
+.animatechest {
+  animation: open-chest 3s ease;
+  transform-origin: right bottom;
+  animation-fill-mode: forwards;
+}
+
+@keyframes open-chest {
+  0 {transform: rotate(0deg);}
+  100% {transform: rotate(120deg);}
+}
+/* CHEST END */
+
+/* BUBBLES  */
+#bubble1 {
+  background-image:url('../img/bubble1.svg');
+  height:300px;
+  width:300px;
+  position: absolute;
+  bottom:0;
+  left:400px;
+  animation: bubble1 60s ease infinite;
+}
+#bubble2 {
+  background-image:url('../img/bubble1.svg');
+  height:300px;
+  width:300px;
+  position: absolute;
+  bottom:400px;
+  left:200px;
+  animation: bubble1 45s ease infinite;
+}
+#bubble3 {
+  background-image:url('../img/bubble1.svg');
+  height:300px;
+  width:300px;
+  position: absolute;
+  bottom:200px;;
+  left:1500px;
+  animation: bubble1 50s ease infinite;
+}
+
+@keyframes bubble1 {
+  0 {transform: translate(0,0);}
+  100% {transform: translate(0,-9180px);}
+}
+/* BUBBLES END */
 
 /* #sfish {
   height:50px;
@@ -253,3 +467,101 @@ padding: 0;
   border:1px solid red;
   position:fixed;
 } */
+
+
+/* GLOW */
+/* .glow {
+  animation: glowing 4000ms infinite;
+}
+
+@keyframes glowing {
+  0 {box-shadow:3 3 -20px gold;}
+  40% {box-shadow: 0 0 30px gold;}
+  60% {box-shadow: 0 0 30px gold;}
+  100% {box-shadow: 0 0 -20px gold;}
+} */
+/* GLOW END */
+
+
+/* TEXT */
+#text-shrimp {
+  position: absolute;
+  top: 4300px;
+  left:200px;
+  opacity: 0;
+  transition: all .2s;
+  height:200px;
+  width: 200px;
+  /* visibility: hidden; */
+}
+
+/* .stext {
+  visibility: visible;
+} */
+
+#text-fish {
+  position: absolute;
+  top: 6800px;
+  right:500px;
+  opacity: 0;
+  transition: all .2s;
+  height:200px;
+  width: 200px;
+}
+/* TEXT END */
+
+
+/* SHRIMP AND CANNOLI */
+
+#shrimp {
+  position:absolute;
+  top:4550px;
+  left:0;
+  height:300px;
+  width:300px;
+}
+#cfish {
+  position:absolute;
+  top: 6900px;
+  right:100px;
+  height:400px;
+  width:400px;
+  animation: floaty 4s ease-in-out infinite;
+}
+
+
+/* TOP SCENE */
+
+#topright  {
+  height:400px;
+  width:600px;
+  position:absolute;
+  right:0;
+  top:0;
+}
+
+#waves {
+  background: url("../img/waves.svg") repeat-x;
+
+  height:100px;
+  width:100%;
+  position: absolute;
+  top:500px;
+
+}
+
+#coin1 {
+  height:100px;
+  width:100px;
+  position: absolute;
+  bottom:255px;
+  left:1100px;
+  animation: coindrop1 4s .5s infinite;
+  z-index: -1;
+}
+
+@keyframes coindrop1 {
+  0 {}
+10% {transform: translate(-70px,20px);}
+100% {transform: translate(-70px,400px);}
+}
