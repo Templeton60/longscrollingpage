@@ -124,21 +124,21 @@ if (fromTop > 5800){
 
 // var stext = $('#text-shrimp')
 
-window.onscroll = function (){
-  //when the user scrolls do all of this
-  fromTop = window.pageYOffset;
-  // console.log tests if it works
-  console.log(fromTop);
-//.style means open css file for that thing, then go to the value called "top" and change it
-if (fromTop > 4200){
-  // changes colors of the counter if past 1000 pixels
-
-
-}
-
-else {
-
-}};
+// window.onscroll = function (){
+//   //when the user scrolls do all of this
+//   fromTop = window.pageYOffset;
+//   // console.log tests if it works
+//   console.log(fromTop);
+// //.style means open css file for that thing, then go to the value called "top" and change it
+// if (fromTop > 4200){
+//   // changes colors of the counter if past 1000 pixels
+//
+//
+// }
+//
+// else {
+//
+// }};
 // window.addEventListener("scroll", function animate())
 //
 // function
